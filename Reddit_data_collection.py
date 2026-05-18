@@ -49,7 +49,7 @@ from datetime import datetime, timezone
 
 
 BASE_URL = "https://arctic-shift.photon-reddit.com/api"
-OUTPUT_FILE = "reddit_raw.json"
+OUTPUT_FILE = "reddit_data.json"
 
 REDDIT_URLS = [
     "https://www.reddit.com/r/Android/comments/a5oncy/ios_to_android_seeing_is_believing/",
