@@ -41,7 +41,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
  
  
-API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyA7Oqudv5uGWMivnJ4xmGMWmPJmK2aZurg")
+API_KEY = os.environ.get("YOUTUBE_API_KEY", "key_api_here")
 OUTPUT_FILE = "youtube_data.json"
  
 YOUTUBE_URLS = [
