@@ -1,6 +1,6 @@
 """
 Reddit Data Collection Script
-COSC2671 Social Media and Network Analytics
+COSC2671 Social Media and Network Analysis
 Assignment 2 – Samsung vs iPhone Analysis
 
 Authors:
@@ -52,7 +52,7 @@ BASE_URL = "https://arctic-shift.photon-reddit.com/api"
 OUTPUT_FILE = "reddit_data.json"
 
 REDDIT_URLS = [
-    "https://www.reddit.com/r/Android/comments/a5oncy/ios_to_android_seeing_is_believing/",
+    # r/Smartphones - direct comparisons
     "https://www.reddit.com/r/Smartphones/comments/1l0i3nb/iphones_are_so_overrated/",
     "https://www.reddit.com/r/Smartphones/comments/1nm3cgm/moving_back_to_ios_the_uncomfortable_truth/",
     "https://www.reddit.com/r/Smartphones/comments/1nzjpui/just_switched_from_android_to_ios_and/",
@@ -60,9 +60,17 @@ REDDIT_URLS = [
     "https://www.reddit.com/r/Smartphones/comments/1lkw2zi/i_dont_like_iphones_im_not_a_fan_of_samsung/",
     "https://www.reddit.com/r/Smartphones/comments/1gm2l58/iphone_16_or_samsung_s24/",
     "https://www.reddit.com/r/Smartphones/comments/1ntno62/pixel_10_vs_galaxy_s25_vs_iphone_17_im_confused/",
-    "https://www.reddit.com/r/apple/comments/sq79tv/iphone_13_is_significantly_faster_than_samsungs/",
-    "https://www.reddit.com/r/apple/comments/1b3scws/android_users_switching_to_iphone_prefer_value/",
-    "https://www.reddit.com/r/apple/comments/ulom3s/camera_comparison_samsungs_galaxy_s22_ultra_vs/",
+    "https://www.reddit.com/r/Smartphones/comments/1svldih/s26_ultra_vs_iphone_17_propro_max/",
+    "https://www.reddit.com/r/Smartphones/comments/1sb4egh/should_i_buy_the_iphone_17_or_samsung_s26/",
+    "https://www.reddit.com/r/Smartphones/comments/1t62ovi/iphone_17_pro_vs_samsung_s26_ultra_honest/",
+    "https://www.reddit.com/r/Smartphones/comments/1s0qzsw/after_using_both_for_3_months_i_genuinely_cant/",
+    "https://www.reddit.com/r/Smartphones/comments/1rggrjo/s26_ultra_vs_iphone_17_pro_max_which_will_survive/",
+    "https://www.reddit.com/r/Smartphones/comments/1sdxjzv/should_i_buy_the_iphone_17_or_samsung_s25_ultra/",
+    "https://www.reddit.com/r/Smartphones/comments/1sqvvre/should_get_iphone_17_or_samsung_s26_plus/",
+    "https://www.reddit.com/r/Smartphones/comments/1suju5w/in_2026_is_it_wise_to_say_that_iphones_continue/",
+    "https://www.reddit.com/r/Smartphones/comments/1t2fdik/what_phone_to_buy_in_mid_2026/",
+
+    # r/samsunggalaxy - switching stories and comparisons
     "https://www.reddit.com/r/samsunggalaxy/comments/1tcqxh4/bye_iphone_hope_worth_the_switch/",
     "https://www.reddit.com/r/samsunggalaxy/comments/1sxqktf/yeah_i_finally_left_iphone_no_regrets/",
     "https://www.reddit.com/r/samsunggalaxy/comments/1mi09sp/after_13_yrs_on_iphone/",
@@ -73,9 +81,28 @@ REDDIT_URLS = [
     "https://www.reddit.com/r/samsunggalaxy/comments/1fxxa5s/what_does_your_phone_timeline_look_like/",
     "https://www.reddit.com/r/samsunggalaxy/comments/1fyx4sz/it_finally_came_goodbye_iphone/",
     "https://www.reddit.com/r/samsunggalaxy/comments/1i9ne00/samsung_galaxy_s25_ultra_vs_iphone_16_pro_max/",
+    "https://www.reddit.com/r/samsunggalaxy/comments/1oeptl6/regret_switching_to_iphone/",
+
+    # r/iphone - switching stories and comparisons
     "https://www.reddit.com/r/iphone/comments/1i928mv/what_keeps_you_with_an_iphone/",
     "https://www.reddit.com/r/iphone/comments/1sgw6m9/iphone_users_that_switched_from_samsung_what_is/",
     "https://www.reddit.com/r/iphone/comments/1t124r3/going_back_to_iphone_after_1_year_on_android_my/",
+    "https://www.reddit.com/r/iphone/comments/1rciek2/10_years_android_user_switched_iphone/",
+    "https://www.reddit.com/r/iphone/comments/1hx5y6m/anyone_switched_from_samsung_to_iphone/",
+    "https://www.reddit.com/r/iphone/comments/1jaumlf/i_tried_android_and_switched_back_within_a_month/",
+    "https://www.reddit.com/r/iphone/comments/1jyubrg/people_who_switched_to_an_android_and_then_came/",
+    "https://www.reddit.com/r/iphone/comments/1rqr0cm/switched_from_s24_ultra_to_iphone_17_pro_after_10/",
+
+    # r/apple - comparisons
+    "https://www.reddit.com/r/apple/comments/1b3scws/android_users_switching_to_iphone_prefer_value/",
+    "https://www.reddit.com/r/apple/comments/ulom3s/camera_comparison_samsungs_galaxy_s22_ultra_vs/",
+
+    # r/Android - comparisons
+    "https://www.reddit.com/r/Android/comments/1r2qfxa/samsungs_obsession_with_apple_is_getting_out_of/",
+    "https://www.reddit.com/r/Android/comments/1q3dh24/at_what_point_does_an_android_phone_make_more/",
+    "https://www.reddit.com/r/Android/comments/1llz6ye/everyone_who_was_on_android_and_then_switched_to/",
+    "https://www.reddit.com/r/Android/comments/1os08az/those_who_migrated_from_a_newer_iphone_12_or/",
+    "https://www.reddit.com/r/Android/comments/157nsvc/young_koreans_favor_iphones_over_samsung_galaxy/",
 ]
 
 SAMSUNG_KW = ["samsung", "galaxy", "s26", "s25", "s24", "one ui", "oneui", "snapdragon"]

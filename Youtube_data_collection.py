@@ -41,13 +41,13 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
  
  
-API_KEY = os.environ.get("YOUTUBE_API_KEY", "key_api_here")
+API_KEY = ""
 OUTPUT_FILE = "youtube_data.json"
  
 YOUTUBE_URLS = [
-    "https://www.youtube.com/watch?v=RDET983sVsw",
-    "https://www.youtube.com/watch?v=IYtDS27znnM",
-    "https://www.youtube.com/watch?v=fmThG8pnnmA"
+    "https://www.youtube.com/watch?v=fmThG8pnnmA",
+    "https://www.youtube.com/watch?v=nHkKJ87FS6s",
+    "https://www.youtube.com/watch?v=eCR17sBh-Qw"
 ]
  
 SAMSUNG_KW = ["samsung", "galaxy", "s26", "s25", "s24", "one ui", "oneui", "snapdragon"]
