@@ -6,6 +6,17 @@ Recommended Python version: Python 3.10+
 Tested using Jupyter Notebook 
 
 ================================================================
+FULL DATASET ACCESS
+================================================================
+
+Representative dataset samples are included in this submission package in accordance with the assignment size requirements.
+The complete Reddit and YouTube datasets, along with the full project repository, notebook versions, and supporting files, 
+are available through the GitHub repository below:
+
+https://github.com/ritikkadwane/Assignment-2_Social-Media-and-Network-Analysis.git
+
+
+================================================================
 REQUIRED PACKAGES - install these dependencies before running
 ================================================================
 
